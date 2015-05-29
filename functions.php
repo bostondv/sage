@@ -17,7 +17,8 @@ $sage_includes = [
   'lib/config.php',                // Configuration
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
-  'lib/extras.php',                // Custom functions
+  'lib/extras.php',                // Custom functions,
+  'lib/woocommerce.php',            // WooCommerce
 ];
 
 foreach ($sage_includes as $file) {

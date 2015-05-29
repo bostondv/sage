@@ -6,7 +6,9 @@ namespace Roots\Sage\Titles;
  * Page titles
  */
 function title() {
-  if (is_home()) {
+  if (is_woocommerce() && function_exists('woocommerce_page_title')) {
+    return woocommerce_page_title(false);
+  } elseif (is_home()) {
     if (get_option('page_for_posts', true)) {
       return get_the_title(get_option('page_for_posts', true));
     } else {
